@@ -21,7 +21,7 @@
 
 แนะนำให้รันผ่าน **Virtual Environment** เพื่อป้องกัน Library ตีกับโปรเจกต์อื่นครับ
 
-### 1. เตรียมโฟลเดอร์และ Virtual Environment
+### เตรียมโฟลเดอร์และ Virtual Environment
 เปิด **PowerShell** ในโฟลเดอร์โปรเจกต์แล้วรันคำสั่ง:
 ```powershell
 # สร้างสภาพแวดล้อมจำลอง
@@ -36,9 +36,8 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 pip install -r requirements.txt
 ```
 
-วิธีใช้งาน (Usage)
+## วิธีใช้งาน (Usage)
 หลังจากติดตั้งเสร็จแล้ว ให้รันโปรแกรมด้วยคำสั่ง:
-
 ```powershell
 python main.py
 ```
