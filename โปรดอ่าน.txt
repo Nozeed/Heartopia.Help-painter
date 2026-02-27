@@ -7,7 +7,7 @@
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 ขั้นตอนการติดตั้งและรัน (Full Commands)
-cd "$HOME\Desktop\Heartopia-Image-Painter"
+cd "$HOME\Desktop\Heartopia.Help-painter-main"
 
 สร้าง Virtual Environment ():
 python -m venv .venv
@@ -27,5 +27,6 @@ python main.py
 เคดิต (https://github.com/PckyDev/Heartopia-Image-Painter)
 - แปลไทย Beer-Studio.com
 - โพสลงที่ Heartopia.help
+
 
 - สนับสนุนค่าอาหารหมา :: https://beer-studio.com/donate
