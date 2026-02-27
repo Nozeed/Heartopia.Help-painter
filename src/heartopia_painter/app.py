@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import os
 import threading
+import webbrowser
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Optional, Tuple
@@ -479,6 +480,15 @@ class MainWindow(QtWidgets.QMainWindow):
 
         tab_main_layout.addWidget(paint_group)
 
+        # Add link label at the bottom
+        link_label = QtWidgets.QLabel()
+        link_label.setTextFormat(QtCore.Qt.TextFormat.RichText)
+        link_label.setText('<a href="https://beer-studio.com/" style="color: #0078d4; text-decoration: underline;">Visit Beer Studio</a>')
+        link_label.setOpenExternalLinks(False)  # We'll handle this manually
+        link_label.linkActivated.connect(lambda: webbrowser.open("https://beer-studio.com/"))
+        link_label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        tab_main_layout.addWidget(link_label)
+
         tab_main_layout.addStretch(1)
 
         # Wiring
@@ -846,11 +856,11 @@ class MainWindow(QtWidgets.QMainWindow):
                 except Exception:
                     # If the image can't be loaded anymore, just ignore it.
                     self._loaded = None
-                    self.lbl_image.setText("No image loaded")
+                    self.lbl_image.setText("ยังไม่ได้โหลดภาพ")
             else:
-                self.lbl_image.setText("No image loaded")
+                self.lbl_image.setText("ยังไม่ได้โหลดภาพ")
         else:
-            self.lbl_image.setText("No image loaded")
+            self.lbl_image.setText("ยังไม่ได้โหลดภาพ")
 
         self._refresh_config_view()
 
@@ -858,7 +868,7 @@ class MainWindow(QtWidgets.QMainWindow):
         w, h = self._selected_preset_wh()
         path, _ = QtWidgets.QFileDialog.getOpenFileName(
             self,
-            "Select image",
+            "เลือกรูปภาพ",
             str(Path.home()),
             "Images (*.png *.jpg *.jpeg *.bmp *.webp);;All Files (*.*)",
         )
@@ -980,7 +990,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self._restore_selection_state()
 
     def _on_setup_new_color(self):
-        name, ok = QtWidgets.QInputDialog.getText(self, "New color", "Color name:")
+        name, ok = QtWidgets.QInputDialog.getText(self, "สีใหม่", "ชื่อสี:")
         if not ok or not name.strip():
             return
         name = name.strip()
@@ -1022,8 +1032,8 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def _wizard_capture_main_color(self, name: str):
         self._capture_click_async(
-            "Setup new color",
-            "Step 1: Click the MAIN color button in the main palette.",
+            "ตั้งค่าสีใหม่",
+            "ขั้นตอนที่ 1: คลิกปุ่มสีหลักในพาเลตหลัก",
             lambda res: self._wizard_after_main_capture(name, res),
         )
 
@@ -1036,10 +1046,10 @@ class MainWindow(QtWidgets.QMainWindow):
 
         QtWidgets.QMessageBox.information(
             self,
-            "Setup new color",
-            "Step 2: Open the shades panel in-game.\n"
-            "Then click each shade button one-by-one (left click).\n"
-            "When you are done, click 'Finish'.",
+            "ตั้งค่าสีใหม่",
+            "ขั้นตอนที่ 2: เปิดแผงเฉดสีในเกม\n"
+            "จากนั้นคลิกปุ่มเฉดสีแต่ละปุ่มทีละปุ่ม (คลิกซ้าย)\n"
+            "เมื่อเสร็จแล้ว ให้คลิก 'เสร็จสิ้น'",
         )
 
         # Collect shade picks until user clicks Finish.
@@ -1054,8 +1064,8 @@ class MainWindow(QtWidgets.QMainWindow):
 
         v = QtWidgets.QVBoxLayout(dlg)
         lbl = QtWidgets.QLabel(
-            "Click 'Capture next shade', then click the shade button location in the game.\n"
-            "Repeat until done, then click Finish." 
+            "คลิก 'จับภาพเฉดสีถัดไป' จากนั้นคลิกที่ตำแหน่งปุ่มเฉดสีในเกม\n"
+            "ทำซ้ำจนกว่าจะเสร็จ จากนั้นคลิก 'เสร็จสิ้น'" 
         )
         lbl.setWordWrap(True)
         v.addWidget(lbl)
@@ -1064,8 +1074,8 @@ class MainWindow(QtWidgets.QMainWindow):
         v.addWidget(lst)
 
         row = QtWidgets.QHBoxLayout()
-        btn_capture = QtWidgets.QPushButton("Capture next shade")
-        btn_finish = QtWidgets.QPushButton("Finish")
+        btn_capture = QtWidgets.QPushButton("จับภาพเฉดสีถัดไป")
+        btn_finish = QtWidgets.QPushButton("เสร็จสิ้น")
         row.addWidget(btn_capture)
         row.addWidget(btn_finish)
         v.addLayout(row)
@@ -1257,7 +1267,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.btn_stop.setEnabled(False)
         self._stop_esc_listener()
         self._hide_status_overlay()
-        self.statusBar().showMessage("Erase complete", 4000)
+        self.statusBar().showMessage("ลบเสร็จสิ้น", 4000)
 
     def _on_erase_stopped(self, msg: str) -> None:
         self.btn_paint.setEnabled(True)
@@ -1266,7 +1276,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.btn_stop.setEnabled(False)
         self._stop_esc_listener()
         self._hide_status_overlay()
-        self.statusBar().showMessage(msg or "Erase stopped", 4000)
+        self.statusBar().showMessage(msg or "หยุดการลบ", 4000)
 
     def _on_erase_error(self, msg: str) -> None:
         self.btn_paint.setEnabled(True)
@@ -1275,7 +1285,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.btn_stop.setEnabled(False)
         self._stop_esc_listener()
         self._hide_status_overlay()
-        QtWidgets.QMessageBox.warning(self, "Erase failed", f"Erase hit an error.\n\nError: {msg}")
+        QtWidgets.QMessageBox.warning(self, "การลบล้มเหลว", f"การลบพบข้อผิดพลาด\n\nข้อผิดพลาด: {msg}")
 
     def _start_erase_worker(self) -> None:
         if self._canvas_rect is None:
@@ -1515,8 +1525,8 @@ class MainWindow(QtWidgets.QMainWindow):
             if self._paint_session_sig is None or cur_sig != self._paint_session_sig:
                 QtWidgets.QMessageBox.information(
                     self,
-                    "Can't resume",
-                    "The image/canvas/preset changed since the last run.\n\nStart a new paint instead.",
+                    "ไม่สามารถทำต่อได้",
+                    "รูปภาพ/Canvas/การตั้งค่าเปลี่ยนแปลงตั้งแต่การรันครั้งล่าสุด\n\nกรุณาเริ่มการวาดใหม่แทน",
                 )
                 self._reset_paint_session()
                 return
