@@ -18,6 +18,7 @@
 - CustomTkinter (สำหรับหน้าจอ UI)
 
 ## ดูวิดีโอสอนใช้งาน [YOUTUBE](https://youtu.be/nr_-wqowNoM?si=U9XXHyDxfqi201iv)
+[https://youtu.be/nr_-wqowNoM?si=U9XXHyDxfqi201iv](https://youtu.be/nr_-wqowNoM?si=U9XXHyDxfqi201iv)
 
 ## 🛠️ การติดตั้ง (Installation)
 
