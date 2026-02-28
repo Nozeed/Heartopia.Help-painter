@@ -32,7 +32,7 @@ python -m venv .venv
 
 # เปิดใช้งาน (Activate)
 .\.venv\Scripts\Activate.ps1
-#หาก Windows บล็อกการรันไฟล์ .ps1
+# หาก Windows บล็อกการรันไฟล์ .ps1
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 # ติดตั้ง Library ที่จำเป็น
