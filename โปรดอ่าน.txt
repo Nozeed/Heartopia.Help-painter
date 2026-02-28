@@ -23,12 +23,13 @@ python -m venv .venv
 ติดตั้ง Library ที่จำเป็น (สำคัญมาก)
 pip install -r requirements.txt
 
-เริ่มใช้งานโปรแกรม: (หากกลับมาใช้โปรแกรมอีกครั้งให้รันตรงนี้เลย)
+เริ่มใช้งานโปรแกรม
 python main.py
 
 จากนั้นดูวิธีตั้งค่าโปรแกรมตามคลิปที่สอนได้เลย
 
 เคดิต (https://github.com/PckyDev/Heartopia-Image-Painter)
+
 
 
 
