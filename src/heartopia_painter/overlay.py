@@ -112,7 +112,7 @@ class RectSelectOverlay(QtWidgets.QWidget):
         if delta == 0:
             return
         step = 1 if delta > 0 else -1
-        self._magnifier_zoom = max(1, min(10, self._magnifier_zoom + step))
+        self._magnifier_zoom = max(1, min(12, self._magnifier_zoom + step))
         self.update()
 
     def mouseReleaseEvent(self, event: QtGui.QMouseEvent):
@@ -164,9 +164,7 @@ class RectSelectOverlay(QtWidgets.QWidget):
                 sgeo = screen.geometry()
                 sx = int(global_pt.x() - sgeo.x())
                 sy = int(global_pt.y() - sgeo.y())
-                # Calculate source size based on zoom level for actual magnification
-                src_size = max(5, int(self._magnifier_src_px / self._magnifier_zoom))
-                half = src_size
+                half = int(self._magnifier_src_px)
                 grab = screen.grabWindow(0, sx - half, sy - half, half * 2, half * 2)
 
                 target = QtCore.QSize(self._magnifier_box_px, self._magnifier_box_px)
@@ -237,7 +235,7 @@ class RectSelectOverlay(QtWidgets.QWidget):
                 QtCore.Qt.AspectRatioMode.IgnoreAspectRatio,
                 QtCore.Qt.TransformationMode.SmoothTransformation,
             )
-            painter.setOpacity(0.20)
+            painter.setOpacity(0.40)
             painter.drawPixmap(rect.topLeft(), scaled)
             painter.setOpacity(1.0)
 
@@ -696,7 +694,6 @@ class StatusOverlay(QtWidgets.QWidget):
                 painter.setPen(pen)
                 painter.setBrush(QtCore.Qt.BrushStyle.NoBrush)
                 painter.drawRect(cell_rect(gx, gy))
-
 
 
 
