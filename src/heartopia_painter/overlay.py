@@ -112,7 +112,7 @@ class RectSelectOverlay(QtWidgets.QWidget):
         if delta == 0:
             return
         step = 1 if delta > 0 else -1
-        self._magnifier_zoom = max(1, min(4, self._magnifier_zoom + step))
+        self._magnifier_zoom = max(1, min(10, self._magnifier_zoom + step))
         self.update()
 
     def mouseReleaseEvent(self, event: QtGui.QMouseEvent):
@@ -315,7 +315,7 @@ class PointSelectOverlay(QtWidgets.QWidget):
         painter = QtGui.QPainter(self)
         painter.setRenderHint(QtGui.QPainter.RenderHint.Antialiasing)
 
-        painter.fillRect(rect, QtGui.QColor(0, 200, 255, 35))
+        painter.fillRect(self.rect(), QtGui.QColor(0, 0, 0, 70))
 
         # Instruction box
         box = QtCore.QRect(20, 20, 520, 64)
@@ -663,7 +663,7 @@ class StatusOverlay(QtWidgets.QWidget):
             painted_scaled = self._painted_img.scaled(inner.size(), QtCore.Qt.AspectRatioMode.IgnoreAspectRatio, QtCore.Qt.TransformationMode.FastTransformation)
 
             painter.save()
-            painter.setOpacity(0.10)
+            painter.setOpacity(0.22)
             painter.drawImage(inner, base_scaled)
             painter.restore()
 
@@ -696,4 +696,7 @@ class StatusOverlay(QtWidgets.QWidget):
                 painter.setPen(pen)
                 painter.setBrush(QtCore.Qt.BrushStyle.NoBrush)
                 painter.drawRect(cell_rect(gx, gy))
+
+
+
 
