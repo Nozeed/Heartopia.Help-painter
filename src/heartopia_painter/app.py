@@ -254,7 +254,7 @@ class MainWindow(QtWidgets.QMainWindow):
         tab_timing_layout = QtWidgets.QVBoxLayout(tab_timing)
 
         tabs.addTab(tab_main, "หลัก")
-        tabs.addTab(tab_cfg, "การตั้งค่าสี")
+        tabs.addTab(tab_cfg, "การตั้งค่าปุ่มและสี")
         tabs.addTab(tab_timing, "จังหวะ / ความน่าเชื่อถือ")
 
         # Image load
