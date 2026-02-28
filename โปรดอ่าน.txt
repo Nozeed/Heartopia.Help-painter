@@ -7,6 +7,8 @@
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 ขั้นตอนการติดตั้งและรัน (Full Commands)
+
+เข้าแฟ้มของโปรเจค แฟ้มต้องชื่อ Heartopia.Help-painter-main และต้องอยู่ที่ Desktop
 cd "$HOME\Desktop\Heartopia.Help-painter-main"
 
 สร้าง Virtual Environment ():
@@ -14,7 +16,6 @@ python -m venv .venv
 
 การ Activate
 .\.venv\Scripts\Activate.ps1
-
 
 ติดตั้ง Library ที่จำเป็น (สำคัญมาก)
 pip install -r requirements.txt
@@ -27,4 +28,5 @@ python main.py
 เคดิต (https://github.com/PckyDev/Heartopia-Image-Painter)
 - แปลไทย Beer-Studio.com
 - สนับสนุนค่าอาหารหมา :: https://beer-studio.com/donate
+
 
