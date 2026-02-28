@@ -15,6 +15,7 @@ from .image_processing import PixelGrid, load_and_resize_to_grid
 from .overlay import Marker, MarkersOverlay, PointResult, PointSelectOverlay, RectResult, RectSelectOverlay, StatusOverlay
 from .paint import PainterOptions, erase_canvas, paint_grid
 
+# -*- coding: utf-8 -*-
 
 ONE_TO_ONE_PRESET_NAME = "1:1"
 SIXTEEN_NINE_PRESET_NAME = "16:9"
