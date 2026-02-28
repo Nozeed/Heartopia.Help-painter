@@ -59,7 +59,7 @@ class RectSelectOverlay(QtWidgets.QWidget):
 
         # Magnifier / zoom assist (mouse wheel to change zoom)
         self._magnifier_zoom: int = 1  # 1 disables
-        self._magnifier_src_px: int = 18  # half-size in pixels of the sampled region
+        self._magnifier_src_px: int = 72  # half-size in pixels of the sampled region
         self._magnifier_box_px: int = 170  # rendered box size
 
         # Cover all screens
@@ -164,7 +164,9 @@ class RectSelectOverlay(QtWidgets.QWidget):
                 sgeo = screen.geometry()
                 sx = int(global_pt.x() - sgeo.x())
                 sy = int(global_pt.y() - sgeo.y())
-                half = int(self._magnifier_src_px)
+                # Calculate source size based on zoom level for actual magnification
+                src_size = max(5, int(self._magnifier_src_px / self._magnifier_zoom))
+                half = src_size
                 grab = screen.grabWindow(0, sx - half, sy - half, half * 2, half * 2)
 
                 target = QtCore.QSize(self._magnifier_box_px, self._magnifier_box_px)
