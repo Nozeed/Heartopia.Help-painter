@@ -86,7 +86,7 @@ class WorkerSignals(QtCore.QObject):
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Heartopia Image Painter")
+        self.setWindowTitle("Beer-Studio | Painter For Heartopia")
 
         self.statusBar().showMessage("พร้อมใช้งาน")
 
@@ -121,7 +121,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def _ensure_status_overlay(self) -> StatusOverlay:
         if self._status_overlay is None:
-            self._status_overlay = StatusOverlay(title="Heartopia Painter")
+            self._status_overlay = StatusOverlay(title="Beer-Studio | Painter")
         return self._status_overlay
 
     def _capture_foreground_window_rect(self) -> Optional[Tuple[int, int, int, int]]:
@@ -336,7 +336,7 @@ class MainWindow(QtWidgets.QMainWindow):
         cfg_layout.addWidget(self.lst_colors)
 
         self.lbl_cfg_hint = QtWidgets.QLabel(
-            "เคล็ดลับ: ย้ายเมาส์ไปมุมบนซ้ายเพื่อยกเลิกการวาด (PyAutoGUI failsafe)."
+            "เคล็ดลับ: ตั้งค่า Windows Mode เกมส์และกลางจอ"
         )
         self.lbl_cfg_hint.setWordWrap(True)
         cfg_layout.addWidget(self.lbl_cfg_hint)
