@@ -45,11 +45,9 @@ pip install -r requirements.txt
 python main.py
 ```
 
-1. กดปุ่ม Open Image เพื่อเลือกรูปที่ต้องการ
-2. ปรับค่า Grid Size หรือความละเอียดของพิกเซล
-3. กด Process เพื่อแปลงรูป
-4. นำภาพที่ได้ไปเป็นต้นแบบในการวาดในเกมได้เลย!
-5. 
+## วิธีแก้สีเพี้ยนวาดไม่ตรง
+[https://www.youtube.com/watch?v=7ReYhclehEA](https://www.youtube.com/watch?v=7ReYhclehEA)
+
 ### Update 01/03/26
 - ลบขนาดรูป 9:16 ออกมีบัค ใช้ได้แค่ 16:9 กับ 1:1
 ### Update 28/02/26
