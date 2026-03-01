@@ -482,7 +482,7 @@ class MainWindow(QtWidgets.QMainWindow):
         # Add link label at the bottom
         link_label = QtWidgets.QLabel()
         link_label.setTextFormat(QtCore.Qt.TextFormat.RichText)
-        link_label.setText('<a href="https://beer-studio.com" style="color: #0078d4; text-decoration: underline;">Visit : Beer-Studio</a>')
+        link_label.setText('<a href="https://beer-studio.com" style="color: #0078d4; text-decoration: underline;">Translate by : Beer-Studio</a>')
         link_label.setOpenExternalLinks(False)  # We'll handle this manually
         link_label.linkActivated.connect(lambda: webbrowser.open("https://beer-studio.com"))
         link_label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
