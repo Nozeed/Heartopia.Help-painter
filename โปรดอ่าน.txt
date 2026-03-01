@@ -1,32 +1,30 @@
 เคดิต (https://github.com/PckyDev/Heartopia-Image-Painter)
-ตัวโปรแกรมเป็นแบบ open source ของฟรี ใครไปซื้อมาคือคุณโดนต้มแล้ว
-# แปลไทย และ ปรับปรุงโปรแกรมใหม่โดย https://Beer-Studio.com
-# วิดีโอสอนใช้งาน https://youtu.be/nr_-wqowNoM
+>> ตัวโปรแกรมเป็นแบบ Open Source ของฟรี ใครไปซื้อมาคือคุณโดนต้มแล้ว <<
+แปลไทยและปรับปรุงแก้ไขเพิ่มเติมโดย https://Beer-Studio.com
 
 # ขั้นตอนการติดตั้งและรัน (Full Commands)
+1 ติดตั้ง python 3+ ก่อน (https://www.python.org/downloads/windows/)
 
-- ติดตั้ง python 3+ ก่อน (https://www.python.org/downloads/windows/)
+2 แตกไฟล์ Heartopia-Image-Painter.zip ไว้ที่ desktop
 
-- แตกไฟล์ Heartopia-Image-Painter.zip ไว้ที่ desktop
+3 ใช้ PowerShell (Run as administrator) ในการรัน
 
-- ใช้ PowerShell (Run as administrator) ในการรัน
-
-- ปลดล็อกสิทธิ์การรัน Script (ทำครั้งเดียว)
+4 ปลดล็อกสิทธิ์การรัน Script (ทำครั้งเดียว)
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
-- เข้าแฟ้มของโปรเจค แฟ้มต้องชื่อ Heartopia.Help-painter-main และต้องอยู่ที่ Desktop
+5 เข้าแฟ้มของโปรเจค แฟ้มต้องชื่อ Heartopia.Help-painter-main และต้องอยู่ที่ Desktop
 cd "$HOME\Desktop\Heartopia.Help-painter-main"
 
-- สร้าง Virtual Environment ():
+6 สร้าง Virtual Environment ():
 python -m venv .venv
 
-- การ Activate
+7 ทำการ Activate
 .\.venv\Scripts\Activate.ps1
 
-- ติดตั้ง Library ที่จำเป็น (สำคัญมาก)
+8 ติดตั้ง Library ที่จำเป็น (สำคัญมาก)
 pip install -r requirements.txt
 
-- เริ่มใช้งานโปรแกรม
+9 เริ่มใช้งานโปรแกรม
 python main.py
 
 - วิดีโอสอนใช้งาน
