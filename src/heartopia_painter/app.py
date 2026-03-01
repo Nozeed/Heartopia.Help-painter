@@ -15,7 +15,6 @@ from .image_processing import PixelGrid, load_and_resize_to_grid
 from .overlay import Marker, MarkersOverlay, PointResult, PointSelectOverlay, RectResult, RectSelectOverlay, StatusOverlay
 from .paint import PainterOptions, erase_canvas, paint_grid
 
-# -*- coding: utf-8 -*-
 
 ONE_TO_ONE_PRESET_NAME = "1:1"
 SIXTEEN_NINE_PRESET_NAME = "16:9"
@@ -337,7 +336,7 @@ class MainWindow(QtWidgets.QMainWindow):
         cfg_layout.addWidget(self.lst_colors)
 
         self.lbl_cfg_hint = QtWidgets.QLabel(
-            "เคล็ดลับ: ตั้งค่าภาพในเกมเป็น Windows Mode และอยู่กลางจอ"
+            "เคล็ดลับ: ตั้งค่า Windows Mode เกมส์และกลางจอ"
         )
         self.lbl_cfg_hint.setWordWrap(True)
         cfg_layout.addWidget(self.lbl_cfg_hint)
@@ -484,7 +483,7 @@ class MainWindow(QtWidgets.QMainWindow):
         # Add link label at the bottom
         link_label = QtWidgets.QLabel()
         link_label.setTextFormat(QtCore.Qt.TextFormat.RichText)
-        link_label.setText('<a href="https://beer-studio.com" style="color: #0078d4; text-decoration: underline;">By : Beer-Studio</a>')
+        link_label.setText('<a href="https://beer-studio.com" style="color: #0078d4; text-decoration: underline;">Visit : Beer-Studio</a>')
         link_label.setOpenExternalLinks(False)  # We'll handle this manually
         link_label.linkActivated.connect(lambda: webbrowser.open("https://beer-studio.com"))
         link_label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
@@ -825,7 +824,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def _update_variant_ui_visibility(self) -> None:
         preset = self.cbo_preset.currentText()
-        is_precision = preset in {ONE_TO_ONE_PRESET_NAME, SIXTEEN_NINE_PRESET_NAME}
+        is_precision = preset in {ONE_TO_ONE_PRESET_NAME, SIXTEEN_NINE_PRESET_NAME, NINE_SIXTEEN_PRESET_NAME}
         is_tshirt = preset == TSHIRT_PRESET_NAME
 
         self.lbl_precision.setVisible(is_precision)
@@ -964,6 +963,10 @@ class MainWindow(QtWidgets.QMainWindow):
         if self.cbo_preset.currentText() == SIXTEEN_NINE_PRESET_NAME:
             self._cfg.sixteen_nine_precision = self.cbo_precision.currentText() or getattr(
                 self._cfg, "sixteen_nine_precision", "เล็ก"
+            )
+        if self.cbo_preset.currentText() == NINE_SIXTEEN_PRESET_NAME:
+            self._cfg.nine_sixteen_precision = self.cbo_precision.currentText() or getattr(
+                self._cfg, "nine_sixteen_precision", "เล็ก"
             )
         if self.cbo_preset.currentText() == TSHIRT_PRESET_NAME:
             self._cfg.tshirt_part = self.cbo_part.currentText() or self._cfg.tshirt_part
