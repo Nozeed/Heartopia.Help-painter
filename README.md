@@ -48,8 +48,13 @@ python main.py
 ## วิธีแก้สีเพี้ยนวาดไม่ตรง
 [https://www.youtube.com/watch?v=7ReYhclehEA](https://www.youtube.com/watch?v=7ReYhclehEA)
 
+## ข้อมูลอัพเดทแก้ไข
 ### Update 01/03/26
 - ลบขนาดรูป 9:16 ออกมีบัค ใช้ได้แค่ 16:9 กับ 1:1
 ### Update 28/02/26
 - แก้การซูมตอนกด scroll mouse ขึ้นตอนเลือก พื้นที่ Canvas.. ให้ซูมได้ สูงสุด x12
 - แก้ Overlay ให้มองง่าย ได้ลากรูปง่ายและตรงกับเกมมากขึ้น
+
+ที่มา : [https://github.com/PckyDev/Heartopia-Image-Painter](https://github.com/PckyDev/Heartopia-Image-Painter)
+### โปรแกรมตัวนี้ผมนำมาแก้ไขและแปลให้ใช้งานได้ง่ายขึ้น
+# ใครโลกสวยให้ไปแจ้งผู้พัฒนาเกมครับไม่ต้องมาร้องงอแงดื้นแถวนี้ ส่วนใครกลัวโดนแบนแนะนำอย่าใช้ครับ :)
