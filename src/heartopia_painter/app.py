@@ -336,7 +336,7 @@ class MainWindow(QtWidgets.QMainWindow):
         cfg_layout.addWidget(self.lst_colors)
 
         self.lbl_cfg_hint = QtWidgets.QLabel(
-            "เคล็ดลับ: ตั้งค่า Windows Mode เกมส์และกลางจอ"
+            "เคล็ดลับ: ตั้งค่า Windows Mode ให้อยู่กลางจอ ขนาด 1920x1080 หรือ 1600x900"
         )
         self.lbl_cfg_hint.setWordWrap(True)
         cfg_layout.addWidget(self.lbl_cfg_hint)
