@@ -1,3 +1,4 @@
+เคดิต (https://github.com/PckyDev/Heartopia-Image-Painter)
 # แปลไทย และ ปรับปรุงโปรแกรมใหม่โดย https://Beer-Studio.com
 # วิดีโอสอนใช้งาน https://youtu.be/nr_-wqowNoM?si=U9XXHyDxfqi201iv
 
@@ -28,7 +29,6 @@ python main.py
 
 จากนั้นดูวิธีตั้งค่าโปรแกรมตามคลิปที่สอนได้เลย
 
-เคดิต (https://github.com/PckyDev/Heartopia-Image-Painter)
 
 
 
