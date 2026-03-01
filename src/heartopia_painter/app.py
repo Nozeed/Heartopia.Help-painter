@@ -302,7 +302,7 @@ class MainWindow(QtWidgets.QMainWindow):
         row_cfg1 = QtWidgets.QHBoxLayout()
         self.btn_set_shades_button = QtWidgets.QPushButton("ตั้งค่าปุ่มแผงสี")
         self.btn_set_back_button = QtWidgets.QPushButton("ตั้งค่าปุ่มย้อนกลับ")
-        self.btn_show_main_overlay = QtWidgets.QPushButton("แสดงซ้อนสีหลัก")
+        self.btn_show_main_overlay = QtWidgets.QPushButton("แสดงสีหลัก")
         row_cfg1.addWidget(self.btn_set_shades_button)
         row_cfg1.addWidget(self.btn_set_back_button)
         row_cfg1.addWidget(self.btn_show_main_overlay)
