@@ -18,7 +18,6 @@ from .paint import PainterOptions, erase_canvas, paint_grid
 
 ONE_TO_ONE_PRESET_NAME = "1:1"
 SIXTEEN_NINE_PRESET_NAME = "16:9"
-NINE_SIXTEEN_PRESET_NAME = "9:16"
 TSHIRT_PRESET_NAME = "เสื้อยืด"
 
 ONE_TO_ONE_PRECISIONS: dict[str, Tuple[int, int]] = {
@@ -270,7 +269,7 @@ class MainWindow(QtWidgets.QMainWindow):
         row2 = QtWidgets.QHBoxLayout()
         row2.addWidget(QtWidgets.QLabel("Canvas preset:"))
         self.cbo_preset = QtWidgets.QComboBox()
-        self.cbo_preset.addItems([ONE_TO_ONE_PRESET_NAME, SIXTEEN_NINE_PRESET_NAME, NINE_SIXTEEN_PRESET_NAME, TSHIRT_PRESET_NAME])
+        self.cbo_preset.addItems([ONE_TO_ONE_PRESET_NAME, SIXTEEN_NINE_PRESET_NAME, TSHIRT_PRESET_NAME])
         row2.addWidget(self.cbo_preset, 1)
 
         self.lbl_precision = QtWidgets.QLabel("ความละเอียด:")
@@ -824,7 +823,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def _update_variant_ui_visibility(self) -> None:
         preset = self.cbo_preset.currentText()
-        is_precision = preset in {ONE_TO_ONE_PRESET_NAME, SIXTEEN_NINE_PRESET_NAME, NINE_SIXTEEN_PRESET_NAME}
+        is_precision = preset in {ONE_TO_ONE_PRESET_NAME, SIXTEEN_NINE_PRESET_NAME}
         is_tshirt = preset == TSHIRT_PRESET_NAME
 
         self.lbl_precision.setVisible(is_precision)
@@ -963,10 +962,6 @@ class MainWindow(QtWidgets.QMainWindow):
         if self.cbo_preset.currentText() == SIXTEEN_NINE_PRESET_NAME:
             self._cfg.sixteen_nine_precision = self.cbo_precision.currentText() or getattr(
                 self._cfg, "sixteen_nine_precision", "เล็ก"
-            )
-        if self.cbo_preset.currentText() == NINE_SIXTEEN_PRESET_NAME:
-            self._cfg.nine_sixteen_precision = self.cbo_precision.currentText() or getattr(
-                self._cfg, "nine_sixteen_precision", "เล็ก"
             )
         if self.cbo_preset.currentText() == TSHIRT_PRESET_NAME:
             self._cfg.tshirt_part = self.cbo_part.currentText() or self._cfg.tshirt_part
