@@ -1,39 +1,37 @@
 เคดิต (https://github.com/PckyDev/Heartopia-Image-Painter)
+ตัวโปรแกรมเป็นแบบ open source ของฟรี ใครไปซื้อมาคือคุณโดนต้มแล้ว
 # แปลไทย และ ปรับปรุงโปรแกรมใหม่โดย https://Beer-Studio.com
 # วิดีโอสอนใช้งาน https://youtu.be/nr_-wqowNoM
 
-ติดตั้ง python 3+ ก่อน (https://www.python.org/downloads/windows/)
-แตกไฟล์ Heartopia-Image-Painter ไว้ที่ desktop
+# ขั้นตอนการติดตั้งและรัน (Full Commands)
 
-ใช้ PowerShell ในการรัน
+- ติดตั้ง python 3+ ก่อน (https://www.python.org/downloads/windows/)
 
-ปลดล็อกสิทธิ์การรัน Script (ทำครั้งเดียว)
+- แตกไฟล์ Heartopia-Image-Painter.zip ไว้ที่ desktop
+
+- ใช้ PowerShell (Run as administrator) ในการรัน
+
+- ปลดล็อกสิทธิ์การรัน Script (ทำครั้งเดียว)
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
-ขั้นตอนการติดตั้งและรัน (Full Commands)
-
-เข้าแฟ้มของโปรเจค แฟ้มต้องชื่อ Heartopia.Help-painter-main และต้องอยู่ที่ Desktop
+- เข้าแฟ้มของโปรเจค แฟ้มต้องชื่อ Heartopia.Help-painter-main และต้องอยู่ที่ Desktop
 cd "$HOME\Desktop\Heartopia.Help-painter-main"
 
-สร้าง Virtual Environment ():
+- สร้าง Virtual Environment ():
 python -m venv .venv
 
-การ Activate
+- การ Activate
 .\.venv\Scripts\Activate.ps1
 
-ติดตั้ง Library ที่จำเป็น (สำคัญมาก)
+- ติดตั้ง Library ที่จำเป็น (สำคัญมาก)
 pip install -r requirements.txt
 
-เริ่มใช้งานโปรแกรม
+- เริ่มใช้งานโปรแกรม
 python main.py
 
-จากนั้นดูวิธีตั้งค่าโปรแกรมตามคลิปที่สอนได้เลย
-
+- วิดีโอสอนใช้งาน
+จากนั้นดูคลิปวิธีตั้งค่าโปรแกรม https://youtu.be/nr_-wqowNoM
 วิธีแก้สีเพี้ยนวาดไม่ตรง https://youtu.be/7ReYhclehEA
 
-
-
-
-
-
-
+# ใครโลกสวยให้ไปแจ้งผู้พัฒนาเกมครับไม่ต้องมาร้องงอแงดิ้นแถวนี้ 
+# ส่วนใครกลัวโดนแบนแนะนำอย่าใช้ครับ :)
