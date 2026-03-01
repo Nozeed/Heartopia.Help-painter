@@ -25,7 +25,7 @@
 แนะนำให้รันผ่าน **Virtual Environment** เพื่อป้องกัน Library ตีกับโปรเจกต์อื่นครับ
 
 ### เตรียมโฟลเดอร์และ Virtual Environment
-เปิด **PowerShell** ในโฟลเดอร์โปรเจกต์แล้วรันคำสั่ง:
+เปิด **PowerShell** (Run as administrator) ในโฟลเดอร์โปรเจกต์แล้วรันคำสั่ง:
 ```powershell
 # สร้างสภาพแวดล้อมจำลอง
 python -m venv .venv
