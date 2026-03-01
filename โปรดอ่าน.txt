@@ -1,6 +1,6 @@
 เคดิต (https://github.com/PckyDev/Heartopia-Image-Painter)
 # แปลไทย และ ปรับปรุงโปรแกรมใหม่โดย https://Beer-Studio.com
-# วิดีโอสอนใช้งาน https://youtu.be/nr_-wqowNoM?si=U9XXHyDxfqi201iv
+# วิดีโอสอนใช้งาน https://youtu.be/nr_-wqowNoM
 
 ติดตั้ง python 3+ ก่อน (https://www.python.org/downloads/windows/)
 แตกไฟล์ Heartopia-Image-Painter ไว้ที่ desktop
@@ -30,6 +30,7 @@ python main.py
 จากนั้นดูวิธีตั้งค่าโปรแกรมตามคลิปที่สอนได้เลย
 
 วิธีแก้สีเพี้ยนวาดไม่ตรง https://youtu.be/7ReYhclehEA
+
 
 
 
