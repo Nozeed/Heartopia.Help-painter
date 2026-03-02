@@ -48,17 +48,18 @@ https://github.com/Nozeed/Heartopia.Help-painter/blob/main/README.md
 ----------------------------------------------------------------------
 
 การกลับมารันโปรแกรมอีกครั้งหลังปิดเครื่อง (Windows PowerShell)
-1️⃣ เปิด PowerShell (ขั้นตแนติดตั้ง 3)
-2️⃣ เข้าไปยังโฟลเดอร์โปรเจกต์ (ขั้นตแนติดตั้ง 5)
-3️⃣ เปิดใช้งาน Virtual Environment (ขั้นตแนติดตั้ง 6)
-4️⃣ รันโปรแกรม  (ขั้นตแนติดตั้ง 9)
+1️⃣ เปิด PowerShell (ขั้นตอนติดตั้ง 3)
+2️⃣ เข้าไปยังโฟลเดอร์โปรเจกต์ (ขั้นตอนติดตั้ง 5)
+3️⃣ เปิดใช้งาน Virtual Environment (ขั้นตอนติดตั้ง 6)
+4️⃣ รันโปรแกรม  (ขั้นตอนติดตั้ง 9)
 สรุปคือ 3 คำสั่ง หลังเปิด PowerShell:
-cd "$HOME\Desktop\Heartopia.Help-painter-main"
-.\.venv\Scripts\Activate.ps1
-python main.py
+- cd "$HOME\Desktop\Heartopia.Help-painter-main"
+- .\.venv\Scripts\Activate.ps1
+- python main.py
 
 ----------------------------------------------------------------------
 
 # ใครโลกสวยให้ไปแจ้งผู้พัฒนาเกมครับไม่ต้องมาร้องงอแงดิ้นแถวนี้ 
 # ส่วนใครกลัวโดนแบนแนะนำอย่าใช้ครับ :)
+
 
