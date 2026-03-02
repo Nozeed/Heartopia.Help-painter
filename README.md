@@ -18,6 +18,8 @@
 
 ## ดูวิดีโอสอนใช้งาน [YOUTUBE](https://youtu.be/nr_-wqowNoM?si=U9XXHyDxfqi201iv)
 [https://youtu.be/nr_-wqowNoM?si=U9XXHyDxfqi201iv](https://youtu.be/nr_-wqowNoM?si=U9XXHyDxfqi201iv)
+### วิธีแก้สีเพี้ยนวาดไม่ตรง
+[https://www.youtube.com/watch?v=7ReYhclehEA](https://www.youtube.com/watch?v=7ReYhclehEA)
 
 ---
 
@@ -146,9 +148,6 @@ deactivate
 * สามารถนำไป build เป็น `.exe` ได้ในอนาคต
 
 ---
-
-## วิธีแก้สีเพี้ยนวาดไม่ตรง
-[https://www.youtube.com/watch?v=7ReYhclehEA](https://www.youtube.com/watch?v=7ReYhclehEA)
 
 ## ข้อมูลอัพเดทแก้ไข
 ### Update 01/03/26
