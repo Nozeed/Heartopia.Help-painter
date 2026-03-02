@@ -1,5 +1,5 @@
 <div align="center">
-  <img height="300" src="https://pic.4th.in/images/2026/03/02/logo.png"  />
+  <img height="350" src="https://pic.4th.in/images/2026/03/02/logo.png"  />
 </div>
 
 # 🎨 Heartopia.Help-painter
@@ -155,7 +155,7 @@ deactivate
 ---
 
 ## 🎨 ขนาดรูปที่แนะนำ
-![ขนาดที่แนะนำ](https://pic.4th.in/images/2026/03/02/7a663b2c-1c9f-426b-947d-6e0c7d1cf96e.png)
+![ขนาดที่แนะนำ](https://pic.4th.in/images/2026/03/02/size.jpg)
 
 ## ข้อมูลอัพเดทแก้ไข
 ### Update 01/03/26
@@ -174,5 +174,5 @@ deactivate
 ---
 
 <div align="center">
-  <img height="120" src="https://pic.4th.in/images/2026/02/11/NOZEED_LOGO2.png"  />  <img height="120" src="https://pic.4th.in/images/2026/03/02/donate-logo.png"  />
+  <img height="125" src="https://pic.4th.in/images/2026/02/11/NOZEED_LOGO2.png"  />  <img height="125" src="https://pic.4th.in/images/2026/03/02/donate-logo.png"  />
 </div>
