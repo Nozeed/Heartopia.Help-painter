@@ -30,8 +30,8 @@
 ## 🛠️ การติดตั้งบน Windows Windows (Installation)
 
 โปรแกรมที่ต้องใช้:
-* Python 3.10 หรือใหม่กว่า 👉 [https://www.python.org/downloads/](https://www.python.org/downloads/)
-* Git 👉 [https://git-scm.com/download/win](https://git-scm.com/download/win)
+* Python 3.10 หรือใหม่กว่า 👉 [https://www.python.org/downloads/](https://www.python.org/ftp/python/3.14.3/python-3.14.3-amd64.exe)
+* Git 👉 [https://git-scm.com/download/win](https://github.com/git-for-windows/git/releases/download/v2.53.0.windows.1/Git-2.53.0-64-bit.exe)
 
 ### ติดตั้งโปรแกรม
 - ติดตั้ง **Python** ✅ Add Python to PATH -> กด **Install Now**
