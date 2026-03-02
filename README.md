@@ -39,6 +39,9 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 # ติดตั้ง Library ที่จำเป็น
 pip install -r requirements.txt
+
+# เปิดโปรแกรม
+python main.py
 ```
 
 # 🍎 Heartopia Help Painter — macOS Installation Guide
