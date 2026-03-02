@@ -2,13 +2,6 @@
 
 เครื่องมือช่วยแปลงรูปภาพให้กลายเป็น **Pixel Art** สำหรับไกด์การวาดภาพในเกม **Heartopia** โดยเฉพาะ! ช่วยให้คุณเลือกสีจาก Palette ในเกมได้แม่นยำและวางแผนการวาดได้ง่ายขึ้น
 โปรแกรมแปลไทยให้แล้ว ได้ใช้งานได้แบบไม่งงกัน
----
-
-## ✨ คุณสมบัติ (Features)
-* **Image to Pixel Art:** แปลงรูปภาพทั่วไปให้เป็นสไตล์พิกเซล
-* **Game Palette Matching:** รองรับการเทียบสีให้ตรงกับสีที่มีในเกม Heartopia
-* **Custom Grid:** กำหนดขนาดตาราง (Grid) ได้ตามต้องการ
-* **Preview Mode:** ดูตัวอย่างภาพก่อนนำไปวาดจริง
 
 ---
 
@@ -18,200 +11,141 @@
 - CustomTkinter (สำหรับหน้าจอ UI)
 - Windows 10 (ทุก build ตั้งแต่ 1809 ขึ้นไป โดยเฉพาะ 21H2, 22H2) → ใช้ได้แน่นอน
 - Windows 11 (ทุก build เช่น 21H2, 22H2, 23H2, 24H2) → ใช้ได้ดีที่สุด (แนะนำเพราะ Python ล่าสุดรองรับดี)
+- macOS Intel
+- macOS Apple Silicon (M1 / M2 / M3)
+
+---
 
 ## ดูวิดีโอสอนใช้งาน [YOUTUBE](https://youtu.be/nr_-wqowNoM?si=U9XXHyDxfqi201iv)
 [https://youtu.be/nr_-wqowNoM?si=U9XXHyDxfqi201iv](https://youtu.be/nr_-wqowNoM?si=U9XXHyDxfqi201iv)
 
+---
+
 ## 🛠️ การติดตั้งบน Windows Windows (Installation)
 
-แนะนำให้รันผ่าน **Virtual Environment** เพื่อป้องกัน Library ตีกับโปรเจกต์อื่นครับ
+โปรแกรมที่ต้องใช้:
+* Python 3.10 หรือใหม่กว่า 👉 [https://www.python.org/downloads/](https://www.python.org/downloads/)
+* Git 👉 [https://git-scm.com/download/win](https://git-scm.com/download/win)
 
-### เตรียมโฟลเดอร์และ Virtual Environment
-เปิด **PowerShell** (Run as administrator) ในโฟลเดอร์โปรเจกต์แล้วรันคำสั่ง:
-```powershell
-# สร้างสภาพแวดล้อมจำลอง
-python -m venv .venv
+ติดตั้ง **Python** ✅ Add Python to PATH -> กด **Install Now**
+ติดตั้ง Git ติดตั้งโดยกด Next ตามค่า Default ได้เลย
 
-# เปิดใช้งาน (Activate)
-.\.venv\Scripts\Activate.ps1
-# หาก Windows บล็อกการรันไฟล์ .ps1
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+### เปิด PowerShell
+Start Menu → พิมพ์ PowerShell → Run as Administrator
 
-# ติดตั้ง Library ที่จำเป็น
-pip install -r requirements.txt
-
-# เปิดโปรแกรม
-python main.py
-```
-
-# 🍎 Heartopia Help Painter — macOS Installation Guide
-
-This guide explains how to install and run **Heartopia Help Painter** on macOS (Intel & Apple Silicon: M1 / M2 / M3).
-
----
-
-## ✅ Requirements
-
-Before starting, make sure you have:
-
-* macOS 11+ (Big Sur or newer recommended)
-* Internet connection
-* Terminal access
-* Git installed
-* Python 3.10 or newer
-
----
-
-## 1️⃣ Install Homebrew (if not installed)
-
-Homebrew is the recommended package manager for macOS.
-
-Open **Terminal** and run:
-
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
-Verify installation:
-
-```bash
-brew --version
-```
-
----
-
-## 2️⃣ Install Python
-
-Install Python using Homebrew:
-
-```bash
-brew install python
-```
-
-Check Python version:
-
-```bash
-python3 --version
-```
-
----
-
-## 3️⃣ Install Git (if needed)
-
-```bash
-brew install git
-```
-
-Verify:
-
-```bash
-git --version
-```
-
----
-
-## 4️⃣ Clone the Repository
-
+### ดาวน์โหลดโปรเจกต์จาก GitHub
 ```bash
 git clone https://github.com/Nozeed/Heartopia.Help-painter.git
 cd Heartopia.Help-painter
 ```
 
----
+### อนุญาตให้รัน Script (สำคัญสำหรับ PowerShell)
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+พิมพ์ `Y` แล้วกด Enter
 
-## 5️⃣ Create Virtual Environment (Recommended)
-
-Create a Python virtual environment:
-
-```bash
-python3 -m venv venv
+### สร้าง Virtual Environment
+สร้าง environment สำหรับโปรเจกต์:
+```bash id="rtyxkk"
+python -m venv venv
 ```
 
-Activate it:
-
+เปิดใช้งาน:
 ```bash
-source venv/bin/activate
+.\venv\Scripts\Activate.ps1
 ```
+หากสำเร็จจะเห็น `(venv)` ด้านหน้าบรรทัดคำสั่ง
 
-You should now see `(venv)` in your terminal.
-
----
-
-## 6️⃣ Install Dependencies
-
-Install required packages:
-
+### ติดตั้ง Library ที่จำเป็น
 ```bash
 pip install -r requirements.txt
 ```
+รอจนติดตั้งเสร็จ
 
----
-
-## 7️⃣ Run the Application
-
-Start the app using:
-
+### เปิดใช้งานโปรแกรม
 ```bash
-python src/heartopia_painter/app.py
-```
-
-If your project structure differs:
-
-```bash
-python app.py
+python main.py
 ```
 
 ---
 
-## ⚠️ Troubleshooting
+## 🍎 macOS Installation Guide
+โปรแกรมที่ต้องใช้:
+* Python 3.10 หรือใหม่กว่า
+* Git
+* Homebrew (แนะนำ)
 
-### tkinter not found (GUI not opening)
-
-Install Tk support:
-
+### ติดตั้ง Homebrew (หากยังไม่มี)
+เปิด **Terminal** แล้วรัน:
 ```bash
-brew install python-tk
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+### ติดตั้ง Python
+ติดตั้ง Python ผ่าน Homebrew:
+```bash
+brew install python
+```
+### ติดตั้ง Git
+```bash
+brew install git
+```
+### ดาวน์โหลดโปรเจกต์จาก GitHub
+```bash
+git clone https://github.com/Nozeed/Heartopia.Help-painter.git
+cd Heartopia.Help-painter
+```
+### สร้าง Virtual Environment
+```bash
+python3 -m venv venv
+#เปิดใช้งาน:
+source venv/bin/activate
+```
+### ติดตั้ง Library ที่จำเป็น
+```bash
+pip install -r requirements.txt
+```
+### เปิดใช้งานโปรแกรม
+```bash
+python main.py
 ```
 
 ---
 
-### Pillow or image library errors
+## ⚠️ วิธีแก้ปัญหาที่พบบ่อย (Troubleshooting)
 
-```bash
-pip install --upgrade pillow
+### ❌ Activate ไม่ได้ (script ถูก block) สำหรับ Windows
+รันอีกครั้ง:
+```powershell id="v0czr1"
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+แล้วเปิด PowerShell ใหม่
+
+
+### ❌ pip install ไม่ผ่าน
+อัปเดต pip:
+```powershell
+python -m pip install --upgrade pip
 ```
 
----
-
-### Apple Silicon (M1/M2/M3) compatibility issues
-
-Try reinstalling dependencies:
-
-```bash
-arch -arm64 pip install -r requirements.txt
+### ❌ python ไม่ถูกพบ
+ตรวจสอบ PATH:
+```powershell
+where python
 ```
+หากไม่พบ ให้ติดตั้ง Python ใหม่และติ๊ก **Add Python to PATH**
 
----
-
-## ✅ Optional: Deactivate Virtual Environment
-
-When finished:
-
-```bash
+## ✅ ปิด Virtual Environment เมื่อไม่ได้ใช้งานแล้ว
+```powershell
 deactivate
 ```
 
+## 💡 หมายเหตุ
+* ควร activate `(venv)` ก่อนรันทุกครั้ง
+* แนะนำ PowerShell เวอร์ชันล่าสุด
+* สามารถนำไป build เป็น `.exe` ได้ในอนาคต
+
 ---
-
-## 🎉 Done!
-
-Heartopia Help Painter should now be running on macOS.
-
----
-
-
-ทำตามขั้นตอนสร้าง venv → pip install -r requirements.txt → python main.py
-ถ้า PowerShell บล็อก .ps1 ให้รัน "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser" ครั้งเดียว
 
 ## วิธีแก้สีเพี้ยนวาดไม่ตรง
 [https://www.youtube.com/watch?v=7ReYhclehEA](https://www.youtube.com/watch?v=7ReYhclehEA)
