@@ -1,5 +1,5 @@
 <div align="center">
-  <img height="150" src="https://beer-studio.com/wp-content/uploads/2026/03/logo.png"  />
+  <img height="300" src="https://pic.4th.in/images/2026/03/02/logo.png"  />
 </div>
 
 # 🎨 Heartopia.Help-painter
@@ -171,6 +171,8 @@ deactivate
 - ส่วนใครกลัวโดนแบนแนะนำอย่าใช้ครับ :)
 - สุดท้าย งดมาม่านะครับ แค่โปรแกรมช่วยวาด ไม่ใช่ Hack สะหน่อยงอแงไปได้
 
+---
+
 <div align="center">
-  <img height="100" src="https://pic.4th.in/images/2026/02/11/NOZEED_LOGO2.png"  />  <img height="100" src="https://beer-studio.com/wp-content/uploads/2026/02/donate-logo.png"  />
+  <img height="120" src="https://pic.4th.in/images/2026/02/11/NOZEED_LOGO2.png"  />  <img height="120" src="https://pic.4th.in/images/2026/03/02/donate-logo.png"  />
 </div>
