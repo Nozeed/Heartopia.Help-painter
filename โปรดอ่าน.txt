@@ -11,7 +11,8 @@
 ----------------------------------------------------------------------
 
 # ขั้นตอนการติดตั้งและรัน (Windows)
-1 ติดตั้ง python 3+ ก่อน (https://www.python.org/downloads/windows/)
+1 ติดตั้ง python 3+ ก่อน
+https://www.python.org/ftp/python/3.14.3/python-3.14.3-amd64.exe
 
 2 แตกไฟล์ Heartopia-Image-Painter.zip ไว้ที่ desktop
 
@@ -61,6 +62,7 @@ https://github.com/Nozeed/Heartopia.Help-painter/blob/main/README.md
 
 # ใครโลกสวยให้ไปแจ้งผู้พัฒนาเกมครับไม่ต้องมาร้องงอแงดิ้นแถวนี้ 
 # ส่วนใครกลัวโดนแบนแนะนำอย่าใช้ครับ :)
+
 
 
 
