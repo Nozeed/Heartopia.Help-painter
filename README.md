@@ -29,8 +29,9 @@
 * Python 3.10 หรือใหม่กว่า 👉 [https://www.python.org/downloads/](https://www.python.org/downloads/)
 * Git 👉 [https://git-scm.com/download/win](https://git-scm.com/download/win)
 
-ติดตั้ง **Python** ✅ Add Python to PATH -> กด **Install Now**
-ติดตั้ง **Git** ติดตั้งโดยกด Next ตามค่า Default ได้เลย
+### ติดตั้งโปรแกรม
+- ติดตั้ง **Python** ✅ Add Python to PATH -> กด **Install Now**
+- ติดตั้ง **Git** ติดตั้งโดยกด Next ตามค่า Default ได้เลย
 
 ### เปิด PowerShell
 Start Menu → พิมพ์ PowerShell → Run as Administrator
