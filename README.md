@@ -28,7 +28,7 @@
 * Git 👉 [https://git-scm.com/download/win](https://git-scm.com/download/win)
 
 ติดตั้ง **Python** ✅ Add Python to PATH -> กด **Install Now**
-ติดตั้ง Git ติดตั้งโดยกด Next ตามค่า Default ได้เลย
+ติดตั้ง **Git** ติดตั้งโดยกด Next ตามค่า Default ได้เลย
 
 ### เปิด PowerShell
 Start Menu → พิมพ์ PowerShell → Run as Administrator
